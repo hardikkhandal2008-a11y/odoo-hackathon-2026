@@ -1,0 +1,341 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AssetFlow — Create account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0f1115;
+    --card: #171a20;
+    --border: #262b33;
+    --border-hover: #363c47;
+    --text: #e8e9ec;
+    --text-dim: #9a9fa8;
+    --text-faint: #5e636c;
+    --accent: #ff9a3d;
+    --accent-hover: #ffab5e;
+    --danger: #f0574a;
+    --success: #4caf7d;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    min-height:100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 40px 16px;
+  }
+
+  .wrap{ width:100%; max-width: 380px; }
+
+  .logo-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom: 28px;
+  }
+  .logo-box{
+    width:32px; height:32px;
+    background: var(--accent);
+    border-radius:7px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:13px;
+    color:#241203;
+  }
+  .logo-row span{
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:-0.01em;
+  }
+
+  .card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 26px 24px;
+  }
+
+  h1{
+    font-size:19px;
+    font-weight:600;
+    margin: 0 0 4px;
+  }
+  .sub{
+    font-size:13.5px;
+    color: var(--text-dim);
+    margin: 0 0 22px;
+  }
+
+  .field{ margin-bottom:15px; }
+  .field label{
+    display:block;
+    font-size:12.5px;
+    font-weight:500;
+    color: var(--text-dim);
+    margin-bottom:6px;
+  }
+  .input-wrap{ position:relative; }
+  input{
+    width:100%;
+    background: #1c2027;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-size:14px;
+    font-family: inherit;
+    outline:none;
+    transition: border-color 0.15s ease;
+  }
+  input::placeholder{ color: var(--text-faint); }
+  input:hover{ border-color: var(--border-hover); }
+  input:focus{ border-color: var(--accent); }
+  input.error{ border-color: var(--danger); }
+
+  input[type="password"]{ padding-right: 40px; }
+  .toggle-eye{
+    position:absolute;
+    right:10px; top:50%;
+    transform: translateY(-50%);
+    background:none; border:none;
+    cursor:pointer;
+    color: var(--text-faint);
+    padding:4px;
+    display:flex;
+    line-height:0;
+  }
+  .toggle-eye:hover{ color: var(--text-dim); }
+
+  .hint{
+    font-size:11.5px;
+    margin-top:5px;
+    color: var(--text-faint);
+  }
+  .hint.error{ color: var(--danger); }
+  .hint.success{ color: var(--success); }
+
+  .strength{
+    display:flex;
+    gap:4px;
+    margin-top:7px;
+  }
+  .strength div{
+    height:3px;
+    flex:1;
+    background: var(--border);
+    border-radius:2px;
+    transition: background 0.2s ease;
+  }
+
+  button.submit{
+    width:100%;
+    padding: 11px 14px;
+    background: var(--accent);
+    border:none;
+    border-radius:7px;
+    color:#241203;
+    font-size:14px;
+    font-weight:600;
+    font-family: inherit;
+    cursor:pointer;
+    margin-top: 6px;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  button.submit:hover{ background: var(--accent-hover); }
+  button.submit:active{ transform: scale(0.98); }
+  button.submit:disabled{
+    background: var(--border);
+    color: var(--text-faint);
+    cursor:not-allowed;
+  }
+
+  .note{
+    font-size:12px;
+    line-height:1.5;
+    color: var(--text-dim);
+    background: #1c2027;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 10px 12px;
+    margin: 18px 0 18px;
+  }
+  .note b{ color: var(--text); font-weight:500; }
+
+  .switch{
+    text-align:center;
+    font-size:13px;
+    color: var(--text-dim);
+    margin-top:18px;
+  }
+  .switch a{
+    color: var(--accent);
+    text-decoration:none;
+  }
+  .switch a:hover{ text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="logo-row">
+    <div class="logo-box">AF</div>
+    <span>AssetFlow</span>
+  </div>
+
+  <div class="card">
+    <h1>Create your account</h1>
+    <p class="sub">Get started with your team's asset workspace.</p>
+
+    <form id="signupForm" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="XYZ" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Work email</label>
+        <input type="email" id="email" placeholder="name@company.com" autocomplete="email" required>
+        <div class="hint" id="emailHint"></div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <input type="password" id="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+          <button type="button" class="toggle-eye" data-target="password" aria-label="Show password">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+        <div class="strength" id="strengthBar">
+          <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="hint">Add at least one special character (like ! or @) to make it stronger.</div>
+      </div>
+
+      <div class="field">
+        <label for="confirm">Confirm password</label>
+        <div class="input-wrap">
+          <input type="password" id="confirm" placeholder="Re-enter password" autocomplete="new-password" required>
+          <button type="button" class="toggle-eye" data-target="confirm" aria-label="Show password">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+        <div class="hint" id="matchHint"></div>
+      </div>
+
+      <div class="note">
+        Signing up creates an <b>employee account</b>. Admin roles are assigned later by a workspace admin.
+      </div>
+
+      <button type="submit" class="submit" id="submitBtn" disabled>Create account</button>
+    </form>
+
+    <p class="switch">Already have an account? <a href="assetflow-login.html">Sign in</a></p>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('signupForm');
+  const password = document.getElementById('password');
+  const confirm = document.getElementById('confirm');
+  const email = document.getElementById('email');
+  const submitBtn = document.getElementById('submitBtn');
+  const matchHint = document.getElementById('matchHint');
+  const emailHint = document.getElementById('emailHint');
+  const strengthBars = document.querySelectorAll('#strengthBar div');
+
+  document.querySelectorAll('.toggle-eye').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.target);
+      const isPw = target.type === 'password';
+      target.type = isPw ? 'text' : 'password';
+    });
+  });
+
+  function scorePassword(val){
+    let score = 0;
+    if (val.length >= 8) score++;
+    if (/[A-Z]/.test(val) && /[a-z]/.test(val)) score++;
+    if (/\d/.test(val)) score++;
+    if (/[^A-Za-z0-9]/.test(val)) score++;
+    return score;
+  }
+
+  function updateStrength(){
+    const score = scorePassword(password.value);
+    const colors = ['#f0574a', '#f0574a', '#e0a33c', '#4caf7d'];
+    strengthBars.forEach((bar, i) => {
+      bar.style.background = i < score ? colors[score - 1] : '#262b33';
+    });
+  }
+
+  function checkMatch(){
+    if (!confirm.value){
+      matchHint.textContent = '';
+      confirm.classList.remove('error');
+      return false;
+    }
+    if (password.value !== confirm.value){
+      matchHint.textContent = "Passwords don't match";
+      matchHint.className = 'hint error';
+      confirm.classList.add('error');
+      return false;
+    }
+    matchHint.textContent = 'Passwords match';
+    matchHint.className = 'hint success';
+    confirm.classList.remove('error');
+    return true;
+  }
+
+  function checkEmail(){
+    if (!email.value){
+      emailHint.textContent = '';
+      email.classList.remove('error');
+      return false;
+    }
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+    if (!valid){
+      emailHint.textContent = 'Please enter a valid email address';
+      emailHint.className = 'hint error';
+      email.classList.add('error');
+    } else {
+      emailHint.textContent = '';
+      email.classList.remove('error');
+    }
+    return valid;
+  }
+
+  function validateForm(){
+    const nameOk = document.getElementById('name').value.trim().length > 1;
+    const emailOk = checkEmail();
+    const pwOk = password.value.length >= 8;
+    const matchOk = checkMatch();
+    submitBtn.disabled = !(nameOk && emailOk && pwOk && matchOk);
+  }
+
+  password.addEventListener('input', () => { updateStrength(); checkMatch(); validateForm(); });
+  confirm.addEventListener('input', () => { checkMatch(); validateForm(); });
+  email.addEventListener('input', () => { checkEmail(); validateForm(); });
+  document.getElementById('name').addEventListener('input', validateForm);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitBtn.textContent = 'Creating account...';
+    submitBtn.disabled = true;
+    setTimeout(() => {
+      submitBtn.textContent = 'Create account';
+    }, 1200);
+  });
+</script>
+
+</body>
+</html>
