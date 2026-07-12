@@ -4,6 +4,4 @@ Author - Hardik khandal
 <br>
 sub-author-Himanshu Saini
 <br>
-sub-author:Parth Mahskar
-<br>
-sub-author:Ankit Das
+sub-author:Ankit Kumar  Das
