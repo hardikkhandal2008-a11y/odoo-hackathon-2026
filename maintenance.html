@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Maintenance</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Maintenance Management</h1>
+            <button class="primary-btn">+ Schedule Maintenance</button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Requests</h3>
+                <p>36</p>
+            </div>
+
+            <div class="card">
+                <h3>Scheduled</h3>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <h3>In Progress</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p>16</p>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Create Maintenance Request</h2>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Asset</label>
+                        <select>
+                            <option>Select Asset</option>
+                            <option>AF001 - Dell Laptop</option>
+                            <option>AF002 - HP Printer</option>
+                            <option>AF003 - Projector</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Maintenance Type</label>
+                        <select>
+                            <option>Preventive</option>
+                            <option>Corrective</option>
+                            <option>Repair</option>
+                            <option>Inspection</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Requested By</label>
+                        <input type="text" placeholder="Employee Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Maintenance Date</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Issue Description</label>
+                    <textarea rows="4" placeholder="Describe the issue..."></textarea>
+                </div>
+
+                <button class="primary-btn">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Maintenance Requests</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Asset</th>
+                        <th>Type</th>
+                        <th>Requested By</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Technician</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>MR001</td>
+                        <td>Dell Latitude</td>
+                        <td>Repair</td>
+                        <td>John Smith</td>
+                        <td>20/06/2025</td>
+                        <td><span class="status maintenance">In Progress</span></td>
+                        <td>David Wilson</td>
+                        <td>
+                            <button>View</button>
+                            <button>Edit</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>MR002</td>
+                        <td>HP Printer</td>
+                        <td>Inspection</td>
+                        <td>Emma Watson</td>
+                        <td>18/06/2025</td>
+                        <td><span class="status available">Completed</span></td>
+                        <td>Mike Brown</td>
+                        <td>
+                            <button>View</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>MR003</td>
+                        <td>Projector</td>
+                        <td>Preventive</td>
+                        <td>Sarah Lee</td>
+                        <td>22/06/2025</td>
+                        <td><span class="status allocated">Scheduled</span></td>
+                        <td>Kevin Adams</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Assign</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>MR004</td>
+                        <td>Office Chair</td>
+                        <td>Repair</td>
+                        <td>David Brown</td>
+                        <td>21/06/2025</td>
+                        <td><span class="status maintenance">In Progress</span></td>
+                        <td>Steve Clark</td>
+                        <td>
+                            <button>View</button>
+                            <button>Complete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

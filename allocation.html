@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Asset Allocation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Asset Allocation & Transfer</h1>
+
+            <button class="primary-btn">
+                + New Allocation
+            </button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Allocations</h3>
+                <p>145</p>
+            </div>
+
+            <div class="card">
+                <h3>Active</h3>
+                <p>108</p>
+            </div>
+
+            <div class="card">
+                <h3>Transfers</h3>
+                <p>24</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Returns</h3>
+                <p>13</p>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Allocate Asset</h2>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Asset</label>
+                        <select>
+                            <option>Select Asset</option>
+                            <option>AF001 - Dell Laptop</option>
+                            <option>AF002 - HP Printer</option>
+                            <option>AF003 - Projector</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Employee</label>
+                        <select>
+                            <option>Select Employee</option>
+                            <option>John Smith</option>
+                            <option>Sarah Lee</option>
+                            <option>Emma Watson</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Department</label>
+                        <select>
+                            <option>IT</option>
+                            <option>Finance</option>
+                            <option>HR</option>
+                            <option>Operations</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Allocation Date</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Expected Return</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Status</label>
+                        <select>
+                            <option>Allocated</option>
+                            <option>Temporary</option>
+                            <option>Transferred</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Remarks</label>
+                    <textarea rows="4" placeholder="Additional notes..."></textarea>
+                </div>
+
+                <button class="primary-btn">
+                    Save Allocation
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Allocation History</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Asset ID</th>
+                        <th>Asset</th>
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Allocated On</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>AF001</td>
+                        <td>Dell Latitude</td>
+                        <td>John Smith</td>
+                        <td>IT</td>
+                        <td>12/06/2025</td>
+                        <td>30/06/2025</td>
+                        <td><span class="status allocated">Allocated</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Return</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AF005</td>
+                        <td>MacBook Pro</td>
+                        <td>Sarah Lee</td>
+                        <td>Design</td>
+                        <td>15/06/2025</td>
+                        <td>05/07/2025</td>
+                        <td><span class="status available">Temporary</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Transfer</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AF012</td>
+                        <td>Projector</td>
+                        <td>Meeting Room</td>
+                        <td>Admin</td>
+                        <td>18/06/2025</td>
+                        <td>19/06/2025</td>
+                        <td><span class="status maintenance">Returned</span></td>
+                        <td>
+                            <button>View</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AF020</td>
+                        <td>Office Chair</td>
+                        <td>Emma Watson</td>
+                        <td>Finance</td>
+                        <td>20/06/2025</td>
+                        <td>-</td>
+                        <td><span class="status allocated">Allocated</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Return</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

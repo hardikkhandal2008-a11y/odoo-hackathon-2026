@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Resource Booking</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Resource Booking</h1>
+            <button class="primary-btn">+ New Booking</button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Resources</h3>
+                <p>42</p>
+            </div>
+
+            <div class="card">
+                <h3>Available</h3>
+                <p>30</p>
+            </div>
+
+            <div class="card">
+                <h3>Booked Today</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Requests</h3>
+                <p>4</p>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Create Booking</h2>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Resource</label>
+                        <select>
+                            <option>Select Resource</option>
+                            <option>Conference Room A</option>
+                            <option>Conference Room B</option>
+                            <option>Projector</option>
+                            <option>Company Vehicle</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Employee</label>
+                        <input type="text" placeholder="Employee Name">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Booking Date</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Purpose</label>
+                        <input type="text" placeholder="Meeting / Training / Client Visit">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Start Time</label>
+                        <input type="time">
+                    </div>
+
+                    <div class="input-group">
+                        <label>End Time</label>
+                        <input type="time">
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Remarks</label>
+                    <textarea rows="4" placeholder="Additional notes..."></textarea>
+                </div>
+
+                <button class="primary-btn">Book Resource</button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Today's Bookings</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Resource</th>
+                    <th>Employee</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>BK001</td>
+                    <td>Conference Room A</td>
+                    <td>John Smith</td>
+                    <td>20/06/2025</td>
+                    <td>09:00 - 10:00</td>
+                    <td>Client Meeting</td>
+                    <td><span class="status available">Confirmed</span></td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Cancel</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BK002</td>
+                    <td>Projector</td>
+                    <td>Sarah Lee</td>
+                    <td>20/06/2025</td>
+                    <td>10:30 - 12:00</td>
+                    <td>Training</td>
+                    <td><span class="status allocated">Booked</span></td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Return</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BK003</td>
+                    <td>Company Vehicle</td>
+                    <td>Emma Watson</td>
+                    <td>20/06/2025</td>
+                    <td>01:00 - 05:00</td>
+                    <td>Site Visit</td>
+                    <td><span class="status maintenance">Pending</span></td>
+                    <td>
+                        <button>Approve</button>
+                        <button>Reject</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>BK004</td>
+                    <td>Conference Room B</td>
+                    <td>David Brown</td>
+                    <td>20/06/2025</td>
+                    <td>03:00 - 04:30</td>
+                    <td>Team Meeting</td>
+                    <td><span class="status available">Confirmed</span></td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Cancel</button>
+                    </td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

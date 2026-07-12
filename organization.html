@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Organization Setup</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Organization Setup</h1>
+
+            <button class="primary-btn">
+                + Add Department
+            </button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Departments</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p>142</p>
+            </div>
+
+            <div class="card">
+                <h3>Managers</h3>
+                <p>15</p>
+            </div>
+
+            <div class="card">
+                <h3>Locations</h3>
+                <p>4</p>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Create Department</h2>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Department Name</label>
+                        <input type="text" placeholder="Information Technology">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Department Code</label>
+                        <input type="text" placeholder="IT001">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Department Head</label>
+                        <input type="text" placeholder="John Smith">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Location</label>
+
+                        <select>
+                            <option>Head Office</option>
+                            <option>Branch Office</option>
+                            <option>Warehouse</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Description</label>
+
+                    <textarea rows="4"
+                        placeholder="Department description..."></textarea>
+
+                </div>
+
+                <button class="primary-btn">
+                    Save Department
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Departments</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Department</th>
+                        <th>Manager</th>
+                        <th>Employees</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>D001</td>
+                        <td>Information Technology</td>
+                        <td>John Smith</td>
+                        <td>35</td>
+                        <td>Head Office</td>
+                        <td><span class="status available">Active</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>D002</td>
+                        <td>Finance</td>
+                        <td>Emma Watson</td>
+                        <td>20</td>
+                        <td>Head Office</td>
+                        <td><span class="status available">Active</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>D003</td>
+                        <td>Human Resources</td>
+                        <td>Sarah Lee</td>
+                        <td>16</td>
+                        <td>Branch Office</td>
+                        <td><span class="status available">Active</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>D004</td>
+                        <td>Operations</td>
+                        <td>David Brown</td>
+                        <td>41</td>
+                        <td>Warehouse</td>
+                        <td><span class="status available">Active</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
