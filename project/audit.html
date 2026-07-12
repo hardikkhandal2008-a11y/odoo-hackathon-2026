@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Asset Audit</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Asset Audit</h1>
+            <button class="primary-btn">+ Schedule Audit</button>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Audits</h3>
+                <p>56</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p>42</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p>10</p>
+            </div>
+
+            <div class="card">
+                <h3>Issues Found</h3>
+                <p>4</p>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <h2>Create Audit Schedule</h2>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Department</label>
+                        <select>
+                            <option>Select Department</option>
+                            <option>IT</option>
+                            <option>Finance</option>
+                            <option>HR</option>
+                            <option>Operations</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Audit Date</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+                        <label>Auditor</label>
+                        <input type="text" placeholder="Auditor Name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Audit Type</label>
+                        <select>
+                            <option>Internal</option>
+                            <option>External</option>
+                            <option>Annual</option>
+                            <option>Random</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Remarks</label>
+                    <textarea rows="4" placeholder="Audit objectives or notes..."></textarea>
+                </div>
+
+                <button class="primary-btn">
+                    Schedule Audit
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Audit Records</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Audit ID</th>
+                        <th>Department</th>
+                        <th>Auditor</th>
+                        <th>Date</th>
+                        <th>Assets Checked</th>
+                        <th>Issues</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>AU001</td>
+                        <td>IT</td>
+                        <td>Michael Scott</td>
+                        <td>18/06/2025</td>
+                        <td>42</td>
+                        <td>0</td>
+                        <td><span class="status available">Completed</span></td>
+                        <td>
+                            <button>View</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AU002</td>
+                        <td>Finance</td>
+                        <td>Sarah Wilson</td>
+                        <td>20/06/2025</td>
+                        <td>25</td>
+                        <td>2</td>
+                        <td><span class="status maintenance">Pending</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Start</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AU003</td>
+                        <td>HR</td>
+                        <td>David Brown</td>
+                        <td>16/06/2025</td>
+                        <td>18</td>
+                        <td>1</td>
+                        <td><span class="status allocated">In Progress</span></td>
+                        <td>
+                            <button>Continue</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>AU004</td>
+                        <td>Operations</td>
+                        <td>Emma Johnson</td>
+                        <td>22/06/2025</td>
+                        <td>56</td>
+                        <td>-</td>
+                        <td><span class="status maintenance">Scheduled</span></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

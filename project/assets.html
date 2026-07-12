@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetFlow | Assets</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>AssetFlow</h2>
+        </div>
+
+<ul class="menu">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="organization.html">Organization Setup</a></li>
+    <li><a href="assets.html">Assets</a></li>
+    <li><a href="allocation.html">Allocation</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="maintenance.html">Maintenance</a></li>
+    <li><a href="audit.html">Audit</a></li>
+    <li><a href="reports.html">Reports</a></li>
+    <li><a href="notifications.html">Notifications</a></li>
+    <li><a href="index.html">Logout</a></li>
+</ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <h1>Asset Management</h1>
+
+            <button class="primary-btn">
+                + Register Asset
+            </button>
+        </header>
+
+        <section class="search-panel">
+
+            <input
+                type="text"
+                placeholder="Search Asset ID, Name, Category..."
+            >
+
+            <select>
+                <option>All Categories</option>
+                <option>Laptop</option>
+                <option>Desktop</option>
+                <option>Printer</option>
+                <option>Projector</option>
+                <option>Furniture</option>
+            </select>
+
+            <select>
+                <option>All Status</option>
+                <option>Available</option>
+                <option>Allocated</option>
+                <option>Maintenance</option>
+                <option>Retired</option>
+            </select>
+
+            <button>Search</button>
+
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Assets</h3>
+                <p>240</p>
+            </div>
+
+            <div class="card">
+                <h3>Available</h3>
+                <p>118</p>
+            </div>
+
+            <div class="card">
+                <h3>Allocated</h3>
+                <p>90</p>
+            </div>
+
+            <div class="card">
+                <h3>Maintenance</h3>
+                <p>18</p>
+            </div>
+
+            <div class="card">
+                <h3>Retired</h3>
+                <p>14</p>
+            </div>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Registered Assets</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>Asset ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Assigned To</th>
+                    <th>Status</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>AF001</td>
+                    <td>Dell Latitude 5440</td>
+                    <td>Laptop</td>
+                    <td>John Smith</td>
+                    <td><span class="status available">Available</span></td>
+                    <td>IT</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>View</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>AF002</td>
+                    <td>HP LaserJet</td>
+                    <td>Printer</td>
+                    <td>Finance</td>
+                    <td><span class="status allocated">Allocated</span></td>
+                    <td>Finance</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>View</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>AF003</td>
+                    <td>BenQ Projector</td>
+                    <td>Projector</td>
+                    <td>Conference Room</td>
+                    <td><span class="status maintenance">Maintenance</span></td>
+                    <td>Admin</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>View</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>AF004</td>
+                    <td>MacBook Pro</td>
+                    <td>Laptop</td>
+                    <td>Sarah Lee</td>
+                    <td><span class="status allocated">Allocated</span></td>
+                    <td>Design</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>View</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>AF005</td>
+                    <td>Office Chair</td>
+                    <td>Furniture</td>
+                    <td>Available</td>
+                    <td><span class="status available">Available</span></td>
+                    <td>Store</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>View</button>
+                    </td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
