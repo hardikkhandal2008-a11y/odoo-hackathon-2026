@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    font-size:16px;
+}
+body{
+    font-family:var(--font-family);
+    background:var(--body-bg);
+    color:var(--text-dark);
+    line-height:1.6;
+    min-height:100vh;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+img{
+    max-width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+ul,
+ol{
+    list-style:none;
+}
+button{
+    border:none;
+    outline:none;
+    background:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+input,
+textarea,
+select,
+button{
+    font-family:inherit;
+    font-size:1rem;
+}
+
+input,
+textarea,
+select{
+    outline:none;
+    border:1px solid var(--border-color);
+    background:var(--white);
+}
+textarea{
+    resize:vertical;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,
+td{
+    text-align:left;
+    vertical-align:middle;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:var(--fw-semibold);
+    color:var(--text-dark);
+}
+
+h1{
+    font-size:2rem;
+}
+
+h2{
+    font-size:1.6rem;
+}
+
+h3{
+    font-size:1.25rem;
+}
+
+h4{
+    font-size:1.1rem;
+}
+
+p{
+    color:var(--text-light);
+}
+
+::selection{
+    background:var(--primary);
+    color:var(--white);
+}
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gray-400);
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--primary);
+}
+
+:focus-visible{
+    outline:2px solid var(--primary);
+    outline-offset:2px;
+}
+
+hr{
+    border:none;
+    border-top:1px solid var(--border-color);
+    margin:1rem 0;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.w-100{
+    width:100%;
+}
